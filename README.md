@@ -1,7 +1,5 @@
 # Lips-and-Eyes-Segmentation
 
-![image](https://github.com/chiragbajaj25/Lips-and-Eyes-Segmentation/blob/master/final.png)
-
 ## Data Collection
 1. Downloading the dataset ->Pre-processing the dataset according to the requirement
 -> Training U-net with Image as input and Mask as output -> Testing results on
@@ -57,3 +55,6 @@ The model is updated with two targets, one indicating that the generated images
 were real (cross entropy loss), forcing large weight updates in the generator toward
 generating more realistic images, and the executed real translation of the image,
 which is compared against the output of the generator model (L1 loss).
+
+## Results
+![image](https://github.com/chiragbajaj25/Lips-and-Eyes-Segmentation/blob/master/final.png)
