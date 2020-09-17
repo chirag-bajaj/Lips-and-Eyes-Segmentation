@@ -48,13 +48,23 @@ The discriminator is a deep convolutional neural network that performs image
 classification. Specifically, conditional-image classification. It takes both the source
 image and the target image as input and predicts the likelihood of whether target
 image is real or a fake translation of the source image.
-Loss
+
+#### Loss
 The generator is updated via a weighted sum of both the adversarial loss and the L1
-loss.Discriminator loss is simply binary cross-entropy.
+loss. Discriminator loss is simply binary cross-entropy.
 The model is updated with two targets, one indicating that the generated images
 were real (cross entropy loss), forcing large weight updates in the generator toward
 generating more realistic images, and the executed real translation of the image,
 which is compared against the output of the generator model (L1 loss).
 
-## Results
+### III. Training
+Pix2pix.py contains code for cGAN architecture for both Training and Testing.
+
+### Results
+GAN architecture was used it was very well able to generalize the results
+on the images that weren’t present in dataset while training. Print.py is the python
+script for outputting the results as mentioned in the task.
+Since only 10000 images were used to train, I think if I utilize all the data for training
+the results would further improve and the outputs we get would match the target
+pixel perfect.
 ![image](https://github.com/chiragbajaj25/Lips-and-Eyes-Segmentation/blob/master/final.png)
